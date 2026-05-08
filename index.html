@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jogo clássico de Asteroids com interface moderna e limpa">
+  <title>Asteroids — Jogo Espacial</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="game-container">
+    <!-- HUD -->
+    <div id="hud">
+      <div id="hud-left">
+        <div id="score-label">PONTUAÇÃO</div>
+        <div id="score">0</div>
+      </div>
+      <div id="hud-center">
+        <div id="level-label">NÍVEL</div>
+        <div id="level">1</div>
+      </div>
+      <div id="hud-right">
+        <div id="lives-label">VIDAS</div>
+        <div id="lives"></div>
+      </div>
+    </div>
+
+    <!-- Canvas -->
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- Start Screen -->
+    <div id="start-screen" class="overlay">
+      <div class="overlay-content">
+        <h1 class="game-title">ASTEROIDS</h1>
+        <p class="game-subtitle">Navegue pelo campo de asteroides e sobreviva</p>
+        <div class="controls-info">
+          <div class="control-row"><kbd>W</kbd><kbd></kbd> ou <kbd>↑</kbd> <span>Acelerar</span></div>
+          <div class="control-row"><kbd>A</kbd><kbd>D</kbd> ou <kbd>←</kbd><kbd>→</kbd> <span>Girar</span></div>
+          <div class="control-row"><kbd>ESPAÇO</kbd> <span>Atirar</span></div>
+        </div>
+        <button id="start-btn" class="btn-primary">INICIAR JOGO</button>
+      </div>
+    </div>
+
+    <!-- Pause Screen -->
+    <div id="pause-screen" class="overlay hidden">
+      <div class="overlay-content">
+        <h2 class="pause-title">PAUSADO</h2>
+        <p class="pause-subtitle">Pressione <kbd>P</kbd> para continuar</p>
+      </div>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="gameover-screen" class="overlay hidden">
+      <div class="overlay-content">
+        <h2 class="gameover-title">FIM DE JOGO</h2>
+        <div id="final-score-container">
+          <div class="final-label">PONTUAÇÃO FINAL</div>
+          <div id="final-score" class="final-value">0</div>
+        </div>
+        <div id="high-score-container">
+          <div class="final-label">RECORDE</div>
+          <div id="high-score" class="final-value">0</div>
+        </div>
+        <button id="restart-btn" class="btn-primary">JOGAR NOVAMENTE</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+
+</html>
