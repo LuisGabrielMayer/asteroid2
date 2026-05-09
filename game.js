@@ -18,13 +18,13 @@
   // ---- Constants ----
   const TAU = Math.PI * 2;
   const SHIP_SIZE = 18;
-  const TURN_SPEED = 0.030;
-  const THRUST_POWER = 0.22;
+  const TURN_SPEED = 0.065;
+  const THRUST_POWER = 0.12;
   const FRICTION = 0.992;
-  const BULLET_SPEED = 10;
-  const BULLET_LIFE = 95;
+  const BULLET_SPEED = 8;
+  const BULLET_LIFE = 55;
   const FIRE_RATE = 8; // frames between shots
-  const MAX_BULLETS = 19;
+  const MAX_BULLETS = 8;
   const ASTEROID_SPEED_BASE = 1.2;
   const ASTEROID_SIZES = [48, 24, 12];
   const ASTEROID_SCORES = [20, 50, 100];
@@ -50,7 +50,7 @@
   let state = "start"; // start | playing | paused | gameover
   let score = 0;
   let highScore = parseInt(localStorage.getItem("asteroids_hs") || "0", 10);
-  let lives = 5;
+  let lives = 3;
   let level = 1;
   let ship = null;
   let bullets = [];
