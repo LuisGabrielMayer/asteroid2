@@ -1,5 +1,7 @@
 # ☄️ asteroid2
 
+Link: https://luisgabrielmayer.github.io/asteroid2/
+
 Jogo de asteroides feito em JavaScript. Controle a nave, desvie dos asteroides e [destrua-os / sobreviva o máximo que puder].
 
 <img width="1915" height="915" alt="Captura de tela 2026-11-16 103335" src="https://github.com/user-attachments/assets/29997266-5441-4550-9e59-84db6cb1d991" />
